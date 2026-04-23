@@ -1,0 +1,164 @@
+[
+    {
+      "id": 1,
+      "name": "Paracetamol",
+      "price": 5.99,
+      "image": "images/paracetamol.jpg",
+      "description": "Used to treat fever and mild to moderate pain."
+    },
+    {
+      "id": 2,
+      "name": "Amoxicillin",
+      "price": 10.50,
+      "image": "images/amoxicillin.jpg",
+      "description": "Antibiotic used for various bacterial infections."
+    },
+    {
+      "id": 3,
+      "name": "Acetaminophen",
+      "price": 6.75,
+      "image": "images/acetaminophen.jpg",
+      "description": "Pain reliever and fever reducer."
+    },
+    {
+      "id": 4,
+      "name": "Doxycycline",
+      "price": 12.00,
+      "image": "images/doxycycline.jpg",
+      "description": "Treats acne, respiratory, and other infections."
+    },
+    {
+      "id": 5,
+      "name": "Ibuprofen",
+      "price": 8.25,
+      "image": "images/ibuprofen.jpg",
+      "description": "Used for pain, inflammation, and fever relief."
+    },
+    {
+      "id": 6,
+      "name": "Aspirin",
+      "price": 7.00,
+      "image": "images/aspirin.jpg",
+      "description": "Reduces pain, inflammation, and prevents blood clots."
+    },
+    {
+      "id": 7,
+      "name": "Diclofenac",
+      "price": 9.50,
+      "image": "images/diclofenac.jpg",
+      "description": "Used to treat joint pain and arthritis."
+    },
+    {
+      "id": 8,
+      "name": "Cetirizine",
+      "price": 6.00,
+      "image": "images/cetirizine.jpg",
+      "description": "Antihistamine used to treat allergies."
+    },
+    {
+      "id": 9,
+      "name": "Loratadine",
+      "price": 5.90,
+      "image": "images/loratadine.jpg",
+      "description": "Non-drowsy allergy medication."
+    },
+    {
+      "id": 10,
+      "name": "Pantoprazole",
+      "price": 11.50,
+      "image": "images/pantoprazole.jpg",
+      "description": "Reduces stomach acid and treats GERD."
+    },
+    {
+      "id": 11,
+      "name": "Omeprazole",
+      "price": 10.00,
+      "image": "images/omeprazole.jpg",
+      "description": "Used to treat acid reflux and ulcers."
+    },
+    {
+      "id": 12,
+      "name": "Domperidone",
+      "price": 6.40,
+      "image": "images/domperidone.jpg",
+      "description": "Relieves nausea and improves digestion."
+    },
+    {
+      "id": 13,
+      "name": "ORS (Oral Rehydration Salts)",
+      "price": 3.25,
+      "image": "images/ors.jpg",
+      "description": "Used to treat dehydration from diarrhea."
+    },
+    {
+      "id": 14,
+      "name": "Azithromycin",
+      "price": 13.00,
+      "image": "images/azithromycin.jpg",
+      "description": "Broad-spectrum antibiotic for respiratory infections."
+    },
+    {
+      "id": 15,
+      "name": "Ciprofloxacin",
+      "price": 12.30,
+      "image": "images/ciprofloxacin.jpg",
+      "description": "Treats UTIs and bacterial infections."
+    },
+    {
+      "id": 16,
+      "name": "Nimesulide",
+      "price": 7.10,
+      "image": "images/nimesulide.jpg",
+      "description": "Anti-inflammatory and fever reducer."
+    },
+    {
+      "id": 17,
+      "name": "Metformin",
+      "price": 15.00,
+      "image": "images/metformin.jpg",
+      "description": "Used to control blood sugar in type 2 diabetes."
+    },
+    {
+      "id": 18,
+      "name": "Amlodipine",
+      "price": 9.50,
+      "image": "images/amlodipine.jpg",
+      "description": "Treats high blood pressure and chest pain."
+    },
+    {
+      "id": 19,
+      "name": "Losartan",
+      "price": 10.80,
+      "image": "images/losartan.jpg",
+      "description": "Used to treat high blood pressure."
+    },
+    {
+      "id": 20,
+      "name": "Atorvastatin",
+      "price": 11.20,
+      "image": "images/atorvastatin.jpg",
+      "description": "Used to lower cholesterol levels."
+    },
+    {
+      "id": 21,
+      "name": "Chlorpheniramine",
+      "price": 5.10,
+      "image": "images/chlorpheniramine.jpg",
+      "description": "Used for relief from cold and allergic symptoms."
+    },
+    {
+      "id": 22,
+      "name": "Ranitidine",
+      "price": 6.90,
+      "image": "images/ranitidine.jpg",
+      "description": "Treats heartburn and ulcers."
+    },
+    {
+      "id": 23,
+      "name": "Famotidine",
+      "price": 7.80,
+      "image": "images/famotidine.jpg",
+      "description": "Reduces stomach acid production."
+    }
+  ]
+  

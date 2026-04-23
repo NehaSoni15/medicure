@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="medicureApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Medicure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .cart-card {
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .cart-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      margin-top: 100px;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body ng-controller="cartCtrl">
+
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a href="medicines.html" class="navbar-brand text-primary fw-bold">← Back</a>
+    <span class="fw-bold">Your Cart</span>
+  </div>
+</nav>
+
+<!-- Cart Content -->
+<div class="container my-5">
+
+  <!-- Empty Cart -->
+  <div class="empty-cart" ng-if="cart.length === 0">
+    <h3>Your cart is empty 🛒</h3>
+    <a href="medicines.html" class="btn btn-primary mt-3">Shop Now</a>
+  </div>
+
+  <!-- Cart Items -->
+  <div ng-if="cart.length > 0">
+
+   <div class="card cart-card mb-3 p-3" ng-repeat="item in cart track by $index">
+  <div class="d-flex align-items-center">
+
+    <img ng-src="{{item.image}}" class="cart-img me-3">
+
+    <div class="flex-grow-1">
+      <h5>{{item.name}}</h5>
+      <p class="mb-1 text-muted">{{item.description}}</p>
+
+      <strong class="text-primary">
+        ₹ {{item.price}} × {{item.qty}} = ₹ {{item.price * item.qty | number:2}}
+      </strong>
+    </div>
+
+    <!-- Quantity Controls -->
+    <div class="d-flex align-items-center me-3">
+      <button class="btn btn-outline-secondary btn-sm"
+              ng-click="decreaseQty($index)">-</button>
+
+      <span class="mx-2">{{item.qty}}</span>
+
+      <button class="btn btn-outline-secondary btn-sm"
+              ng-click="increaseQty($index)">+</button>
+    </div>
+
+    <button class="btn btn-danger"
+            ng-click="removeItem($index)">
+      Remove
+    </button>
+
+  </div>
+</div>
+<button class="btn btn-outline-danger mt-2" ng-click="clearCart()">
+  Clear Cart
+</button>
+    <!-- Total -->
+    <div class="text-end mt-4">
+      <h4>Total: ₹ {{getTotal()}}</h4>
+<button class="btn btn-success mt-2" ng-click="checkout()">
+  Checkout
+</button>    </div>
+
+  </div>
+
+</div>
+
+<!-- Angular -->
+<script src="./angular-1.8.2/angular.min.js"></script>
+
+<script>
+  var app = angular.module("medicureApp", []);
+
+  app.controller("cartCtrl", function($scope) {
+
+    $scope.cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Remove item
+    $scope.removeItem = function(index) {
+      $scope.cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify($scope.cart));
+    };
+
+    // Total price
+    $scope.getTotal = function() {
+  let total = 0;
+
+  $scope.cart.forEach(item => {
+    total += item.price * item.qty;
+  });
+
+  return total.toFixed(2);
+};
+
+
+    $scope.increaseQty = function(index) {
+  $scope.cart[index].qty += 1;
+  localStorage.setItem("cart", JSON.stringify($scope.cart));
+};
+
+$scope.decreaseQty = function(index) {
+  if ($scope.cart[index].qty > 1) {
+    $scope.cart[index].qty -= 1;
+  } else {
+    $scope.cart.splice(index, 1);
+  }
+  localStorage.setItem("cart", JSON.stringify($scope.cart));
+};
+
+
+$scope.checkout = function() {
+  if ($scope.cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  // Clear cart
+  localStorage.removeItem("cart");
+
+  // Redirect
+  window.location.href = "success.html";
+};
+
+$scope.clearCart = function() {
+  $scope.cart = [];
+  localStorage.removeItem("cart");
+};
+  });
+</script>
+
+</body>
+</html>
